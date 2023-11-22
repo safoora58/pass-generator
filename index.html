@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="lib/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="lib/css/bootstrap.rtl.min.css.map">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>password generator</title>
+</head>
+<body>
+
+  <div class="h-100 col-md-8 col-lg-6 col-xl-4 mx-auto d-flex align-items-center ">
+    <div class=" main pt-2 pb-2 container">
+      <div class="container inner-container pb-3 pt-3 pe-5 ps-5">
+        <div class="row title fs-4 fw-bold">
+          <div class="col pb-3">Password Generator</div>
+        </div>
+        <div class="row input-box ">
+          <div class="col mt-4 d-grid position-relative ">
+            <input type="text" class="pe-1 fw-semibold" id="inputPassword" disabled>
+            <span id="copyImage">
+              <img src="images/copy.png" class="copy">
+            </span>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col pass position-relative"></div>
+        </div>
+        <div class="row mt-4">
+          <div class="col">
+            <div class="length-pass d-flex align-items-center justify-content-between">
+              <label class="lable-title fw-bold">Password Length</label>
+              <div class="number-length fw-bold"></div>
+            </div>
+            <input type="range" min="1" max="30" step="1" id="range">
+          </div>
+        </div>
+        <div class="row mt-4 mb-3">
+          <div class="col fw-bold">
+            Password Settings
+          </div>
+        </div>
+        <div class="row row-cols-2">
+          <div class="col mb-3 d-flex align-items-center ">
+            <input type="checkbox" id="lowercase" class="checkbox" checked>
+            <label class="lable">Lowercase (a-z)</label>
+          </div>
+          <div class="col mb-3 d-flex align-items-center">
+            <input type="checkbox" id="uppercase" class="checkbox">
+            <label class="lable">Uppercase (A-Z)</label>
+          </div>
+          <div class="col mb-3 d-flex align-items-center ">
+            <input type="checkbox" id="numbers" class="checkbox">
+            <label class="lable">Numbers (0-9)</label>
+          </div>
+          <div class="col mb-3 d-flex align-items-center ">
+            <input type="checkbox" id="symbols" class="checkbox">
+            <label class="lable">Symbols (!-$^+)</label>
+          </div>
+          <div class="col mb-3 d-flex align-items-center ">
+            <input type="checkbox" id="exclude" class="checkbox">
+            <label class="lable">Exclude Duplicate</label>
+          </div>
+          <div class="col mb-3 d-flex align-items-center ">
+            <input type="checkbox" id="include-spaces" class="checkbox">
+            <label class="lable">Include Spaces</label>
+          </div>
+        </div>
+        <div class="row mt-3 mb-4">
+          <div class="col d-grid">
+            <button class="btn btn-primary pt-3 pb-3" id="generate">GENERATE PASSWORD</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/password generator.js"></script>
+  <script src="lib/js/kit.fontawesome.js"></script>
+  <script src="lib/js/bootstrap.bundle.js"></script>
+</body>
+</html>

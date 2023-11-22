@@ -1,0 +1,149 @@
+:root {
+    --light-blue: #4285f4;
+    --pass-color: #d4dbe5;
+    --weak-color: #E64A4A;
+    --yellow-color: #f1c80b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    direction: ltr;
+    height: 100vh;
+    background: linear-gradient(86.3deg, rgba(0, 119, 182, 1) 3.6%, rgba(8, 24, 68, 1) 87.6%);
+}
+
+.main {
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgb(22, 219, 223),
+        -1px -1px 6px rgba(0, 152, 155, 0.1);
+}
+
+.inner-container {
+    width: 100%;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #bfd1db 100%);
+    border-radius: 20px;
+    box-shadow: 10px 30px 30px rgb(0, 0, 0, 0.25),
+        inset 0px 0px 10px rgba(75, 75, 75, 0.3),
+        inset 5px 5px 20px rgba(0, 0, 0, 0.3),
+        inset -6px -4px 15px rgba(0, 0, 0, 0.5),
+        -11px -11px 15px rgba(121, 119, 119, 0.20),
+        inset 11px 11px 10px rgba(136, 135, 135, 0.55);
+    box-shadow: 30px 30px 30px -20px rgb(0, 0, 0, 0.30),
+        -11px -11px 15px rgba(121, 119, 119, 0.30),
+        inset 11px 11px 10px rgba(136, 135, 135, 0.75),
+        inset -5px -5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.title {
+    border-bottom: 1px solid #d4dbe5;
+}
+
+#inputPassword {
+    letter-spacing: 1.2px;
+    height: 56px;
+    border-radius: 7px;
+    border: 1px solid #aaa;
+    color: black;
+    font-size: 15px;
+    background: none;
+}
+
+.copy {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translate(-50%, -50%);
+    width: 31px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.copy.slide {
+    animation: slide 2.5s;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.bi-check-lg {
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--light-blue);
+}
+
+.pass {
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 11px;
+    height: 5px;
+    background-color: var(--pass-color);
+    border-radius: 30px;
+}
+
+.pass::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--yellow-color);
+    border-radius: 30px;
+    transition: width 0.7s ease;
+}
+
+
+.pass.weak::before {
+    width: 20%;
+    background-color: var(--weak-color);
+}
+
+.pass.medium::before {
+    width: 50%;
+    background-color: var(--yellow-color);
+}
+
+.pass.strong::before {
+    width: 100%;
+    background-color: var(--light-blue);
+}
+
+#range {
+    width: 100%;
+    height: 5px;
+    background-color: var(--pass-color);
+    border-radius: 30px;
+}
+
+.lable {
+    cursor: pointer;
+    padding-left: 9px;
+    color: rgb(55, 54, 54);
+    font-size: 15px;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+#lowercase {
+    pointer-events: none;
+    opacity: 0.7;
+}
